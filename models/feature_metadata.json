@@ -1,0 +1,73 @@
+{
+    "model_type": "RandomForestClassifier",
+    "model_params": {
+        "n_estimators": 300,
+        "max_depth": 12,
+        "min_samples_leaf": 10,
+        "random_state": 42,
+        "class_weight": "balanced",
+        "n_jobs": -1
+    },
+    "feature_columns": [
+        "temperature",
+        "pressure",
+        "vibration",
+        "cycle_time",
+        "parts_per_hour",
+        "temperature_roll_mean",
+        "temperature_roll_std",
+        "temperature_trend",
+        "temperature_dev_from_roll",
+        "pressure_roll_mean",
+        "pressure_roll_std",
+        "pressure_trend",
+        "pressure_dev_from_roll",
+        "vibration_roll_mean",
+        "vibration_roll_std",
+        "vibration_trend",
+        "vibration_dev_from_roll",
+        "cycle_time_roll_mean",
+        "cycle_time_roll_std",
+        "cycle_time_trend",
+        "cycle_time_dev_from_roll",
+        "parts_per_hour_roll_mean",
+        "parts_per_hour_roll_std",
+        "parts_per_hour_trend",
+        "parts_per_hour_dev_from_roll",
+        "emergency_stop",
+        "motor_overheating_warning",
+        "hydraulic_pressure_valve_open"
+    ],
+    "metrics": {
+        "train_roc_auc": 0.9162,
+        "test_roc_auc": 0.8453,
+        "test_pr_auc": 0.755,
+        "classification_report": {
+            "0.0": {
+                "precision": 0.8379126031507877,
+                "recall": 0.8518518518518519,
+                "f1-score": 0.844824733495639,
+                "support": 20979.0
+            },
+            "1.0": {
+                "precision": 0.681361492720935,
+                "recall": 0.6578244085915075,
+                "f1-score": 0.6693861106914438,
+                "support": 10103.0
+            },
+            "accuracy": 0.7887845055015765,
+            "macro avg": {
+                "precision": 0.7596370479358614,
+                "recall": 0.7548381302216797,
+                "f1-score": 0.7571054220935414,
+                "support": 31082.0
+            },
+            "weighted avg": {
+                "precision": 0.7870266926986674,
+                "recall": 0.7887845055015765,
+                "f1-score": 0.7877995611711173,
+                "support": 31082.0
+            }
+        }
+    }
+}
